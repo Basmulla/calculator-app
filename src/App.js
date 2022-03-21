@@ -4,7 +4,6 @@ import { useForm } from "react-hook-form";
 function App() {
 	const [calc, setCalc] = useState("");
 	const [result, setResult] = useState("");
-	const [val, setVal] = useState();
 
 	const ops = ['/', '*', '+', '-', '.'];
 
@@ -54,10 +53,6 @@ function App() {
 		setCalc(value);
 	}
 
-	const clearValues = () => {
-
-	}
-
 	return (
 		<div className="App">
 			<div className="App-title">
@@ -77,8 +72,6 @@ function App() {
 					<button onClick={() => updateCalc('-')}>-
 					</button>
 					<button onClick={deleteLast}>DEL</button>
-					<button onClick={() => setVal(() => "")}>CLR</button>
-					<input type="text" value={val} />
 				</div>
 
 				<div className="digits">{createDigits()}
